@@ -23,7 +23,7 @@ export const RestaurantList: FunctionComponent = () => {
     if (!restaurantState?.list?.loadedOnce) {
       dispatch(RestaurantAction.list())
     }
-  }, [restaurantState?.list?.loadedOnce])
+  }, [dispatch, restaurantState?.list?.loadedOnce])
 
   useEffect(() => {
     setFilteredRestaurants(restaurantList)
