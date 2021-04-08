@@ -9,9 +9,9 @@ This application en `react-native`has for simple purpose to extract information 
 
 ### For iOS
 
-Make sure you have an emulator or a device connected to save time.
-
 Pod linking : `cd ios && pod install --repo-update && cd ..`
+
+Make sure you have an emulator or a device connected to save time.
 Launching : `yarn ios`
 
 ### For Android 
