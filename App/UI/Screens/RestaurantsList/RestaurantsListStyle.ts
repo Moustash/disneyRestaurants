@@ -4,10 +4,21 @@ import { Colors } from '@Styles'
 const styles = StyleSheet.create({
   searchBar: {
     paddingVertical: 10,
-    backgroundColor: Colors.ghostWhite,
+    marginTop: 10,
+    backgroundColor: Colors.white,
     borderRadius: 20,
     paddingHorizontal: 10,
+    marginHorizontal: 10,
     marginBottom: 20,
+    shadowColor: Colors.black,
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.34,
+    shadowRadius: 6.27,
+    overflow: 'visible',
+    elevation: 10,
   },
 })
 

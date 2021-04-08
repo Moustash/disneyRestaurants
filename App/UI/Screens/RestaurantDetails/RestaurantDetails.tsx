@@ -3,6 +3,7 @@ import React, { FunctionComponent, useEffect, useState } from 'react'
 import { Image, Text, View } from 'react-native'
 import HTML from 'react-native-render-html'
 import styles from './RestaurantDetailsStyle'
+import Svg, { Circle } from 'react-native-svg'
 
 export const RestaurantDetails: FunctionComponent = ({ route, navigation }) => {
   const { item } = route.params
@@ -16,6 +17,8 @@ export const RestaurantDetails: FunctionComponent = ({ route, navigation }) => {
     <BasicContainer isLoading={loading} loadingText={'Chargement des détails ...'}>
       <View style={styles.imageContainer}>
         <Image
+          resizeMethod={'auto'}
+          resizeMode={'cover'}
           source={{ uri: item?.heroMedia?.url ?? '' }}
           style={styles.image}
           onLoad={() => { setLoading(true) }}
@@ -23,7 +26,11 @@ export const RestaurantDetails: FunctionComponent = ({ route, navigation }) => {
         />
       </View>
       {/* Handling HTML descriptions */}
-      <HTML source={{ html: item?.shortDescription }} containerStyle={styles.description} />
+      <Text />
+      <View style={styles.description}>
+        <Text style={styles.title}>Informations :</Text>
+        <HTML source={{ html: item?.shortDescription }} />
+      </View>
     </BasicContainer>
   )
 }
