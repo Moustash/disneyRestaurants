@@ -3,7 +3,7 @@ import { Colors } from '@Styles'
 
 const styles = StyleSheet.create({
   imageContainer: {
-    height: '50%',
+    height: '40%',
     backgroundColor: Colors.backgroundDarker,
 
   },

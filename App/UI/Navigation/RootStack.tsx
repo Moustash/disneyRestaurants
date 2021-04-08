@@ -23,6 +23,8 @@ const RootStack = () => {
         component={RestaurantDetails}
         options={{
           headerTitleAlign: 'center',
+          headerBackTitle: 'Retour',
+          headerTruncatedBackTitle: '',
         }}
       />
     </Stack.Navigator>
