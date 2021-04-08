@@ -7,7 +7,13 @@ export interface RestaurantItemProps {
   squareMediaUrl: string,
   onPress?: () => void
 }
-
+/**
+ * @param {string} name
+ * @param {string} squareMediaUrl
+ * @param {void} onPress
+ *
+ * @description Render restaurantItem on restaurantList
+ */
 export const RestaurantItem: FunctionComponent<RestaurantItemProps> = ({ name, squareMediaUrl, onPress }) => {
   return (
     <TouchableOpacity

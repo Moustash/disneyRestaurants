@@ -29,19 +29,6 @@ export const RestaurantList: FunctionComponent = () => {
     setFilteredRestaurants(restaurantList)
   }, [restaurantList])
 
-  const renderRestaurant = ({ item }:{item: RestaurantDTO}) => {
-    return (
-      <RestaurantItem
-        key={item.id}
-        name={item.name}
-        squareMediaUrl={item?.squareMedia?.url}
-        onPress={() => {
-          navigation.navigate(MainRoutes.RestaurantDetails, { item })
-        }}
-      />
-    )
-  }
-
   const contains = (item: RestaurantDTO, query: string) => {
     return !!item?.name?.toLowerCase()?.includes(query)
   }
@@ -74,7 +61,18 @@ export const RestaurantList: FunctionComponent = () => {
         onEndReachedThreshold={0.5}
         data={filteredRestaurants}
         keyExtractor={item => item.id}
-        renderItem={renderRestaurant}
+        renderItem={({ item }:{item: RestaurantDTO}) => {
+          return (
+            <RestaurantItem
+              key={item.id}
+              name={item.name}
+              squareMediaUrl={item?.squareMedia?.url}
+              onPress={() => {
+                navigation.navigate(MainRoutes.RestaurantDetails, { item })
+              }}
+            />
+          )
+        }}
         updateCellsBatchingPeriod={100}
         bounces={false}
         removeClippedSubviews
