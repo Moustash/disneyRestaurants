@@ -8,7 +8,7 @@ import createStore from './CreateStore'
 
 import { restaurant, RestaurantState } from './restaurant'
 
-export type Dispatch = ThunkDispatch<StateTypes, {}, AnyAction>
+export type Dispatch = ThunkDispatch<StateTypes, '', AnyAction>
 
 export * from './restaurant'
 

@@ -2,7 +2,7 @@ import { ThunkDispatch } from 'redux-thunk'
 import { AnyAction } from 'redux'
 import { createSelector, Selector } from 'reselect'
 
-import { restaurant, RestaurantState } from './restaurant'
+import { RestaurantState } from './restaurant'
 
 export interface PaginateItem<T> {
   data: T[],

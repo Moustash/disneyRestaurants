@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row', paddingBottom: 10,
   },
   restaurantName: {
-    fontSize: 15,
+    fontSize: 16,
     paddingLeft: 20,
     paddingRight: 20,
     alignSelf: 'center',

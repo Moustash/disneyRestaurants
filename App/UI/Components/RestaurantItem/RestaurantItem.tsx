@@ -5,7 +5,6 @@ import styles from './RestaurantItemStyle'
 export interface RestaurantItemProps {
   name: string,
   squareMediaUrl: string,
-  shortDescription: string,
   onPress?: () => void
 }
 

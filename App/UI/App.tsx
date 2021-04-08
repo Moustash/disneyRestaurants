@@ -1,18 +1,15 @@
-import React, { FunctionComponent, useEffect } from 'react'
 import { NavigationContainer } from '@react-navigation/native'
+import React, { FunctionComponent } from 'react'
 import RootStack from './Navigation/RootStack'
+import { StatusBar } from 'react-native'
 import { Provider } from 'react-redux'
 import { store } from '@Store'
-import SplashScreen from 'react-native-splash-screen'
-const App: FunctionComponent = () => {
-  useEffect(() => {
-    (async () => {
-      SplashScreen.hide()
-    })()
-  }, [])
 
+const App: FunctionComponent = () => {
   return (
+
     <Provider store={store}>
+      <StatusBar barStyle={'dark-content'} />
       <NavigationContainer>
         <RootStack />
       </NavigationContainer>

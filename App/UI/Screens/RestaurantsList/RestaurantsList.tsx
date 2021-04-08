@@ -1,14 +1,15 @@
+import { RestaurantSelectors, RestaurantDTO, StateTypes, RestaurantAction } from '@Store'
 import { RestaurantItem } from '@Components'
 import { BasicContainer } from '@Containers'
-import { useNavigation } from '@react-navigation/native'
-import { RestaurantSelectors, RestaurantDTO, StateTypes, RestaurantAction } from '@Store'
-import React, { FunctionComponent, useEffect, useState } from 'react'
-
-import { useDispatch, useSelector } from 'react-redux'
 import { MainRoutes } from '@Navigation'
-import filter from 'lodash.filter'
+import { Colors } from '@Styles'
 import styles from './RestaurantsListStyle'
+
+import React, { FunctionComponent, useEffect, useState } from 'react'
+import { useNavigation } from '@react-navigation/native'
+import { useDispatch, useSelector } from 'react-redux'
 import { FlatList, TextInput } from 'react-native'
+import filter from 'lodash.filter'
 
 export const RestaurantList: FunctionComponent = () => {
   const restaurantList: RestaurantDTO[] = useSelector(RestaurantSelectors.list)
@@ -34,7 +35,6 @@ export const RestaurantList: FunctionComponent = () => {
         key={item.id}
         name={item.name}
         squareMediaUrl={item?.squareMedia?.url}
-        shortDescription={item.shortDescription}
         onPress={() => {
           navigation.navigate(MainRoutes.RestaurantDetails, { item })
         }}
@@ -64,6 +64,7 @@ export const RestaurantList: FunctionComponent = () => {
         value={searchText}
         onChangeText={searchText => handleSearch(searchText)}
         placeholder='Search'
+        placeholderTextColor={Colors.grey}
         style={styles.searchBar}
       />
       <FlatList
