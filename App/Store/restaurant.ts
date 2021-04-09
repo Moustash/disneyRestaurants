@@ -1,5 +1,5 @@
 import { Reducer, AnyAction } from 'redux'
-import { omit, uniq } from 'lodash'
+import { uniq } from 'lodash'
 import { Dispatch, ResourceState, initialResourceState, resourceDefaultSelectors } from './utils'
 import axios from 'axios'
 
@@ -76,7 +76,7 @@ type RestaurantStateList = BaseRestaurantState['list'] & { paginationEnded: bool
 export type RestaurantState = ResourceState<RestaurantDTO> & { list: RestaurantStateList }
 
 const initialState: RestaurantState = {
-  ...omit(initialResourceState, 'create', 'update'),
+  ...initialResourceState,
   list: {
     ...initialResourceState.list,
     paginationEnded: false,
