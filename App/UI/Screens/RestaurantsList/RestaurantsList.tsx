@@ -76,6 +76,7 @@ export const RestaurantList: FunctionComponent = () => {
         updateCellsBatchingPeriod={100}
         bounces={false}
         removeClippedSubviews
+        keyboardShouldPersistTaps={'always'}
       />
     </BasicContainer>
   )
