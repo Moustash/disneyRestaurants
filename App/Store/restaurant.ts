@@ -85,6 +85,7 @@ const initialState: RestaurantState = {
 
 /**
  * Selectors
+ * State transformator for unifying state access in app
  */
 
 const restaurantSelector = state => state.restaurant

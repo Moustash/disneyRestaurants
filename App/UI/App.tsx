@@ -4,6 +4,11 @@ import RootStack from './Navigation/RootStack'
 import { Provider } from 'react-redux'
 import { store } from '@Store'
 
+/**
+ *
+ * @description Default screen, openning RootStack
+ */
+
 const App: FunctionComponent = () => {
   return (
 

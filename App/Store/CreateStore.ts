@@ -3,19 +3,22 @@ import thunkMiddleware from 'redux-thunk'
 import { persistReducer, persistStore, Persistor } from 'redux-persist'
 import AsyncStorage from '@react-native-community/async-storage'
 
-// creates the store
 interface StoreConfiguration {
   store: Store,
   persistor: Persistor,
 }
 
 export default (rootReducer: Reducer): StoreConfiguration => {
-  /* ------------- Redux Configuration ------------- */
+  /**
+   * Redux Configuration
+   */
 
   const middleware = [thunkMiddleware]
   const enhancers = []
 
-  /* ------------- Assemble Middleware ------------- */
+  /**
+   * Assemble Middleware
+   */
 
   enhancers.push(applyMiddleware(...middleware))
 

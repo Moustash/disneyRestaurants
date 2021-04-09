@@ -3,8 +3,8 @@ import { AnyAction, combineReducers } from 'redux'
 import createStore from './CreateStore'
 
 /**
- * States.
-**/
+ * States
+ */
 
 import { restaurant, RestaurantState } from './restaurant'
 
