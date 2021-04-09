@@ -10,6 +10,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     marginHorizontal: 10,
     marginBottom: 20,
+    color: 'blue',
     shadowColor: Colors.black,
     shadowOffset: {
       width: 0,
@@ -19,6 +20,25 @@ const styles = StyleSheet.create({
     shadowRadius: 6.27,
     overflow: 'visible',
     elevation: 10,
+  },
+  focusedSearchBar: {
+    paddingVertical: 10,
+    marginTop: 10,
+    backgroundColor: Colors.ghostBlack,
+    borderRadius: 20,
+    paddingHorizontal: 10,
+    marginHorizontal: 10,
+    marginBottom: 20,
+    shadowColor: Colors.black,
+    color: Colors.white,
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.34,
+    shadowRadius: 6.27,
+    overflow: 'visible',
+    // elevation: 10,
   },
 })
 

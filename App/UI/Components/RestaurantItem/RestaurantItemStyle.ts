@@ -26,8 +26,13 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     flex: 1,
   },
-  image: {
+  imageContainer: {
     marginLeft: 5,
+    borderRadius: 20,
+    width: 100,
+    height: 100,
+  },
+  image: {
     borderRadius: 20,
     width: 100,
     height: 100,

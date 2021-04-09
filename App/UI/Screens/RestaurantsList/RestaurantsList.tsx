@@ -14,10 +14,11 @@ import filter from 'lodash.filter'
 export const RestaurantList: FunctionComponent = () => {
   const restaurantList: RestaurantDTO[] = useSelector(RestaurantSelectors.list)
   const restaurantState = useSelector((state: StateTypes) => state.restaurant)
-  const navigation = useNavigation()
   const dispatch = useDispatch()
-  const [searchText, setSearchText] = useState(undefined)
+  const navigation = useNavigation()
+  const [isFocused, setIsFocused] = useState(false)
   const [filteredRestaurants, setFilteredRestaurants] = useState(restaurantList)
+  const [searchText, setSearchText] = useState(undefined)
 
   useEffect(() => {
     if (!restaurantState?.list?.loadedOnce) {
@@ -48,11 +49,13 @@ export const RestaurantList: FunctionComponent = () => {
         autoCapitalize='none'
         autoCorrect={false}
         clearButtonMode='always'
+        onFocus={() => { setIsFocused(true) }}
+        onBlur={() => { setIsFocused(false) }}
         value={searchText}
         onChangeText={searchText => handleSearch(searchText)}
         placeholder='Search'
-        placeholderTextColor={Colors.grey}
-        style={styles.searchBar}
+        placeholderTextColor={isFocused ? Colors.ghostWhite : Colors.grey}
+        style={isFocused ? styles.focusedSearchBar : styles.searchBar}
       />
       <FlatList
         windowSize={50}
@@ -76,6 +79,7 @@ export const RestaurantList: FunctionComponent = () => {
         updateCellsBatchingPeriod={100}
         bounces={false}
         removeClippedSubviews
+        disableVirtualization
         keyboardShouldPersistTaps={'always'}
       />
     </BasicContainer>

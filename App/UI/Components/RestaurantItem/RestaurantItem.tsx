@@ -1,5 +1,6 @@
+import { Assets } from '@Images'
 import React, { FunctionComponent } from 'react'
-import { Image, Text, TouchableOpacity } from 'react-native'
+import { ImageBackground, Text, TouchableOpacity, Image } from 'react-native'
 import styles from './RestaurantItemStyle'
 
 export interface RestaurantItemProps {
@@ -20,10 +21,12 @@ export const RestaurantItem: FunctionComponent<RestaurantItemProps> = ({ name, s
       onPress={onPress}
       style={styles.container}
     >
-      <Image
-        source={{ uri: squareMediaUrl ?? '' }}
-        style={styles.image}
-      />
+      <ImageBackground source={Assets.loader} style={styles.imageContainer}>
+        <Image
+          source={{ uri: squareMediaUrl ?? '' }}
+          style={styles.image}
+        />
+      </ImageBackground>
       <Text style={styles.restaurantName}>
         {name}
       </Text>

@@ -1,3 +1,4 @@
+import { Assets } from '@Images'
 import React, { FunctionComponent } from 'react'
 import { Modal, View, Text, Image } from 'react-native'
 import styles from './ModalLoaderStyle'
@@ -24,7 +25,7 @@ export const ModalLoader: FunctionComponent<ModalLoaderProps> = ({ actionText, l
     >
       <View style={styles.loadingModal}>
         {/* Fancy loader found on internet */}
-        <Image source={{ uri: 'https://i.imgur.com/8riPm56.gif' }}
+        <Image source={Assets.loader}
           style={{ height: 250, width: 250 }}
         />
         {renderText()}

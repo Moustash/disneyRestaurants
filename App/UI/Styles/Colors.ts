@@ -9,4 +9,5 @@ export default {
   primary: '#4eca97',
   secondary: '#212a58',
   ghostWhite: 'rgba(255, 255, 255, .8)',
+  ghostBlack: 'rgba(0,0, 0, .2)',
 }

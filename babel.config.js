@@ -31,9 +31,6 @@ module.exports = function (api) {
                 path.join(__dirname, './'),
               ],
             }),
-          'react-native-svg': require.resolve('react-native-svg', {
-            paths: [path.join(__dirname, './')],
-          }),
         },
         extensions: ['.js', '.ts', '.tsx'],
       },
