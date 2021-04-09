@@ -1,5 +1,5 @@
-import { BasicContainer } from '@Containers'
 import React, { FunctionComponent, useEffect, useState } from 'react'
+import { BasicContainer } from '@Containers'
 import { Image, Text, View } from 'react-native'
 import HTML from 'react-native-render-html'
 import styles from './RestaurantDetailsStyle'

@@ -1,5 +1,6 @@
 /**
- * EVERY ROUTES MUST HAVE DIFFERENT NAMES
+ * Routes
+ * Everyone must have a different name
  */
 
 export enum MainRoutes {

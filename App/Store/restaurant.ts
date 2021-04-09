@@ -3,9 +3,9 @@ import { omit, uniq } from 'lodash'
 import { Dispatch, ResourceState, initialResourceState, resourceDefaultSelectors } from './utils'
 import axios from 'axios'
 
-/* %%%%%%%%%%%%%%%%%% *\
-    Actions Types.
-\* %%%%%%%%%%%%%%%%%% */
+/**
+ * Actions Types
+ */
 
 const GET_RESTAURANT_LIST_REQUEST = 'restaurant/GET_RESTAURANT_LIST_REQUEST'
 const GET_RESTAURANT_LIST_SUCCESS = 'restaurant/GET_RESTAURANT_LIST_SUCCESS'
@@ -16,10 +16,11 @@ export const RestaurantTypes = {
   GET_RESTAURANT_LIST_SUCCESS,
   GET_RESTAURANT_LIST_FAILURE,
 }
-
-/* %%%%%%%%%%%%%%%%%% *\
-    Actions Creators.
-\* %%%%%%%%%%%%%%%%%% */
+/**
+ * @description List function
+ * @param {number} page Page number for further optimisation like pagination
+ * @returns
+ */
 
 function list (page = 0) {
   const perPage = 20
@@ -43,13 +44,17 @@ function list (page = 0) {
   }
 }
 
+/**
+ * Actions
+ */
+
 export const RestaurantAction = {
   list,
 }
 
-/* %%%%%%%%%%%%%%%%%% *\
-    State.
-\* %%%%%%%%%%%%%%%%%% */
+/**
+ * State
+ */
 
 export interface RestaurantDTO {
   id: string,
@@ -78,9 +83,9 @@ const initialState: RestaurantState = {
   },
 }
 
-/* %%%%%%%%%%%%%%%%%% *\
-    Selectors.
-\* %%%%%%%%%%%%%%%%%% */
+/**
+ * Selectors
+ */
 
 const restaurantSelector = state => state.restaurant
 
@@ -88,9 +93,9 @@ export const RestaurantSelectors = {
   ...resourceDefaultSelectors(restaurantSelector),
 }
 
-/* %%%%%%%%%%%%%%%%%% *\
-    Reducer.
-\* %%%%%%%%%%%%%%%%%% */
+/**
+ * Reducer
+ */
 
 export const restaurant: Reducer = (state = initialState, action: AnyAction): RestaurantState => {
   switch (action.type) {
