@@ -53,7 +53,7 @@ export const RestaurantList: FunctionComponent = () => {
         onBlur={() => { setIsFocused(false) }}
         value={searchText}
         onChangeText={searchText => handleSearch(searchText)}
-        placeholder='Search'
+        placeholder='Rechercher..'
         placeholderTextColor={isFocused ? Colors.ghostWhite : Colors.grey}
         style={isFocused ? styles.focusedSearchBar : styles.searchBar}
       />
