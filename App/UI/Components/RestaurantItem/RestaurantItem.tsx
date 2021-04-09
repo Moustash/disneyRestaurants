@@ -1,6 +1,5 @@
-import { Assets } from '@Images'
 import React, { FunctionComponent } from 'react'
-import { ImageBackground, Text, TouchableOpacity, Image } from 'react-native'
+import { Text, TouchableOpacity, Image } from 'react-native'
 import styles from './RestaurantItemStyle'
 
 export interface RestaurantItemProps {
