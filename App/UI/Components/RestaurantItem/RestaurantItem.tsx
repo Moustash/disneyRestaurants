@@ -21,12 +21,10 @@ export const RestaurantItem: FunctionComponent<RestaurantItemProps> = ({ name, s
       onPress={onPress}
       style={styles.container}
     >
-      <ImageBackground source={Assets.loader} style={styles.imageContainer}>
-        <Image
-          source={{ uri: squareMediaUrl ?? '' }}
-          style={styles.image}
-        />
-      </ImageBackground>
+      <Image
+        source={{ uri: squareMediaUrl ?? '' }}
+        style={styles.image}
+      />
       <Text style={styles.restaurantName}>
         {name}
       </Text>

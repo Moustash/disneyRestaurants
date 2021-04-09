@@ -10,7 +10,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     marginHorizontal: 10,
     marginBottom: 20,
-    color: 'blue',
     shadowColor: Colors.black,
     shadowOffset: {
       width: 0,

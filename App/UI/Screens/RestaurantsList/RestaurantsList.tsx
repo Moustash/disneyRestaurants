@@ -59,8 +59,8 @@ export const RestaurantList: FunctionComponent = () => {
       />
       <FlatList
         windowSize={50}
-        scrollEventThrottle={20}
-        maxToRenderPerBatch={20}
+        scrollEventThrottle={2}
+        maxToRenderPerBatch={50}
         onEndReachedThreshold={0.5}
         data={filteredRestaurants}
         keyExtractor={item => item.id}
