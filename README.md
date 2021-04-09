@@ -14,12 +14,13 @@ Pod linking : `cd ios && pod install --repo-update && cd ..`
 Make sure you have an emulator or a device connected to save time.
 Launching : `yarn ios`
 
-Standalone App : `yarn ios:release`
+Standalone App : `yarn ios:standalone`
 
 ### For Android 
 Make sure you have an emulator or a device connected to save time.
 
 Launching `yarn android`
+Standalone App : `yarn android:standalone`
 
 
 

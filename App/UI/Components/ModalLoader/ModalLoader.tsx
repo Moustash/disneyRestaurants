@@ -4,19 +4,15 @@ import { Modal, View, Text, Image } from 'react-native'
 import styles from './ModalLoaderStyle'
 
 export interface ModalLoaderProps {
-  actionText?: string
+  text?: string
   loading: boolean | undefined
 }
-
-export const ModalLoader: FunctionComponent<ModalLoaderProps> = ({ actionText, loading = false }) => {
-  const renderText = () => {
-    const buttonText = actionText
-    if (buttonText) {
-      return (
-        <Text style={styles.loadingText}>{buttonText.toUpperCase()}</Text>
-      )
-    }
-  }
+/**
+ *
+ * @param { string } actionText Loading modal text
+ * @param { boolean } loading Loading trigger
+ */
+export const ModalLoader: FunctionComponent<ModalLoaderProps> = ({ text, loading = false }) => {
   return (
     <Modal
       visible={loading}
@@ -28,7 +24,8 @@ export const ModalLoader: FunctionComponent<ModalLoaderProps> = ({ actionText, l
         <Image source={Assets.loader}
           style={{ height: 250, width: 250 }}
         />
-        {renderText()}
+        { text &&
+        <Text style={styles.loadingText}>{text?.toUpperCase() }</Text>}
       </View>
     </Modal>
   )

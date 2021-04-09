@@ -9,6 +9,11 @@ export interface BasicContainerProps {
   loadingText?: string
 }
 
+/**
+ *
+ * @param {boolean} isLoading Trigger loading modal
+ * @param {string} loadingText Loading modal text
+ */
 export const BasicContainer:FunctionComponent<BasicContainerProps> = ({ children, isLoading, loadingText }) => {
   return (
     <SafeAreaView style={styles.container}>
