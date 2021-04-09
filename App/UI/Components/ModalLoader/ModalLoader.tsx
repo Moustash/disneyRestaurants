@@ -23,6 +23,7 @@ export const ModalLoader: FunctionComponent<ModalLoaderProps> = ({ actionText, l
       transparent
     >
       <View style={styles.loadingModal}>
+        {/* Fancy loader found on internet */}
         <Image source={{ uri: 'https://i.imgur.com/8riPm56.gif' }}
           style={{ height: 250, width: 250 }}
         />

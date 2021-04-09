@@ -9,6 +9,7 @@
       "@Containers": ["UI/Containers"],
       "@Screens": ["UI/Screens"],
       "@Styles": ["UI/Styles"],
+      "@Images": ["UI/Images"],
       "@Store": ["Store"],
       "@Navigation": ["UI/Navigation"],
     },

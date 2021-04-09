@@ -6,8 +6,7 @@ const styles = StyleSheet.create({
     height: '40%',
     backgroundColor: Colors.backgroundDarker,
     margin: 20,
-    borderBottomLeftRadius: 100,
-    borderTopRightRadius: 100,
+    borderRadius: 20,
     shadowColor: Colors.black,
     shadowOffset: {
       width: 0,
@@ -23,15 +22,13 @@ const styles = StyleSheet.create({
   image: {
     width: '100%',
     height: '100%',
-    borderBottomLeftRadius: 100,
-    borderTopRightRadius: 100,
-
+    borderRadius: 20,
   },
   description: {
     padding: 20,
     fontSize: 18,
     fontStyle: 'italic',
-    backgroundColor: Colors.white,
+    backgroundColor: Colors.ghostWhite,
     borderRadius: 20,
     marginHorizontal: 20,
     marginVertical: 20,

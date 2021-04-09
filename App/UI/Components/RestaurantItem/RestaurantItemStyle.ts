@@ -8,8 +8,7 @@ const styles = StyleSheet.create({
     marginVertical: 5,
     marginHorizontal: 10,
     backgroundColor: Colors.white,
-    borderBottomLeftRadius: 40,
-    borderTopRightRadius: 40,
+    borderRadius: 20,
     shadowColor: Colors.black,
     shadowOffset: {
       width: 0,
@@ -19,20 +18,17 @@ const styles = StyleSheet.create({
     shadowRadius: 6.27,
     overflow: 'visible',
     elevation: 10,
-
   },
   restaurantName: {
     fontSize: 16,
     marginLeft: 20,
-    borderBottomLeftRadius: 40,
-    borderTopRightRadius: 40,
+    borderRadius: 20,
     alignSelf: 'center',
     flex: 1,
   },
   image: {
     marginLeft: 5,
-    borderBottomLeftRadius: 40,
-    borderTopRightRadius: 40,
+    borderRadius: 20,
     width: 100,
     height: 100,
   },

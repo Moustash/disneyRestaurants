@@ -17,6 +17,7 @@ module.exports = function (api) {
           '@Store': './App/Store',
           '@Navigation': './App/UI/Navigation',
           '@Styles': './App/UI/Styles',
+          '@Images': './App/UI/Images',
 
           react: require.resolve('react', {
             paths: [path.join(__dirname, './')],

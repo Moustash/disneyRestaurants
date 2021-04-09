@@ -28,6 +28,9 @@ function list (page = 0) {
     dispatch({ type: GET_RESTAURANT_LIST_REQUEST })
     let data = null
     try {
+      /**
+       *  Disneyland Paris API call
+       */
       await axios.post('https://api.disneylandparis.com/query', '{"query":"query activities($market: String!, $types: [String]) { activities(market: $market, types: $types) {... on Activity {id name shortDescription heroMedia {...media} squareMedia {...media}}}}fragment media on Media {  url  alt}","variables":{"market":"fr-fr","types":["Restaurant"]},"operationName":"activities"}'
       ).then(res => {
         data = res?.data?.data?.activities ?? null
