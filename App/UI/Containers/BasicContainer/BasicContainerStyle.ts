@@ -3,13 +3,15 @@ import { Colors } from '@Styles'
 
 const styles = StyleSheet.create({
   container: {
+    overflow: 'visible',
     flex: 1,
     backgroundColor: Colors.backgroundDarker,
   },
-  innerContainer: {
+  imageContainer: {
     flex: 1,
-    // paddingHorizontal: 8,
-    // paddingVertical: 8,
+  },
+  background: {
+    opacity: 0.5,
   },
 })
 

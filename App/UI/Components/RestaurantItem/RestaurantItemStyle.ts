@@ -25,6 +25,8 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     alignSelf: 'center',
     flex: 1,
+    fontWeight: 'bold',
+    color: Colors.primary,
   },
   image: {
     marginLeft: 5,

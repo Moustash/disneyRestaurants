@@ -43,6 +43,14 @@ export const RestaurantList: FunctionComponent = () => {
     setSearchText(text)
   }
 
+  /**
+   *
+   * @param {RestaurantDTO} item Restaurant item which contains details and url.
+   */
+  const onRestaurantItemPress = (item: RestaurantDTO) => {
+    navigation.navigate(MainRoutes.RestaurantDetails, { item })
+  }
+
   return (
     <BasicContainer isLoading={restaurantState?.loading} loadingText='Récupération...'>
       <TextInput
@@ -53,11 +61,13 @@ export const RestaurantList: FunctionComponent = () => {
         onBlur={() => { setIsFocused(false) }}
         value={searchText}
         onChangeText={searchText => handleSearch(searchText)}
-        placeholder='Search'
-        placeholderTextColor={isFocused ? Colors.ghostWhite : Colors.grey}
+        placeholder='Rechercher ...'
+        placeholderTextColor={isFocused ? Colors.ghostWhite : Colors.ghostWhite}
         style={isFocused ? styles.focusedSearchBar : styles.searchBar}
+        hitSlop={{ top: 20, bottom: 10, right: 20, left: 20 }}
       />
       <FlatList
+        style={styles.listContainer}
         windowSize={50}
         scrollEventThrottle={2}
         maxToRenderPerBatch={50}
@@ -71,7 +81,7 @@ export const RestaurantList: FunctionComponent = () => {
               name={item.name}
               squareMediaUrl={item?.squareMedia?.url}
               onPress={() => {
-                navigation.navigate(MainRoutes.RestaurantDetails, { item })
+                onRestaurantItemPress(item)
               }}
             />
           )
