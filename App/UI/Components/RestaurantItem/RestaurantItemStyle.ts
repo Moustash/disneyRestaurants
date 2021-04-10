@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
     backgroundColor: Colors.white,
     borderRadius: 20,
-    shadowColor: Colors.black,
+    shadowColor: Colors.primary,
     shadowOffset: {
       width: 0,
       height: 5,

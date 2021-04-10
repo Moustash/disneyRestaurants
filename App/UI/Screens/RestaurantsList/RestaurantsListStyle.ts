@@ -3,13 +3,13 @@ import { Colors } from '@Styles'
 
 const styles = StyleSheet.create({
   listContainer: {
-    paddingTop: 60,
+    paddingTop: 65,
   },
   searchBar: {
     position: 'absolute',
     zIndex: 10,
     width: '95%',
-    paddingVertical: 10,
+    paddingVertical: 7,
     marginTop: 10,
     backgroundColor: Colors.ghostPrimary,
     borderRadius: 30,
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     zIndex: 10,
     width: '95%',
-    paddingVertical: 10,
+    paddingVertical: 7,
     marginTop: 10,
     backgroundColor: Colors.primary,
     borderRadius: 30,
