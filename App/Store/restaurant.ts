@@ -38,8 +38,7 @@ function list (page = 0) {
       })
       dispatch({ type: GET_RESTAURANT_LIST_SUCCESS, data, page, perPage })
     } catch (error) {
-      const errorMessage = error.message
-      dispatch({ type: GET_RESTAURANT_LIST_FAILURE, errorMessage })
+      dispatch({ type: GET_RESTAURANT_LIST_FAILURE })
     }
   }
 }
@@ -104,16 +103,19 @@ export const restaurant: Reducer = (state = initialState, action: AnyAction): Re
       return {
         ...state,
         loading: true,
+        error: false,
       }
     case GET_RESTAURANT_LIST_FAILURE:
       return {
         ...state,
         loading: false,
+        error: true,
       }
     case GET_RESTAURANT_LIST_SUCCESS:
       return {
         ...state,
         loading: false,
+        error: false,
         data: action.data?.reduce((acc, item) => ({ ...acc, [item.id]: item }), state.data) ?? {},
         list: {
           ...state.list,

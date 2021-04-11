@@ -17,6 +17,7 @@ export type Dispatch = ThunkDispatch<State, void, AnyAction>
 
 export interface ResourceState<T> {
   loading: boolean;
+  error: boolean
   data: { [key: string]: T };
   total: number;
   list: {
@@ -43,6 +44,7 @@ export interface Filter {
 
 export const initialResourceState: ResourceState<any> = {
   loading: false,
+  error: false,
   data: {},
   total: 0,
   list: {

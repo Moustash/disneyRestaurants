@@ -10,7 +10,7 @@ export const RestaurantDetails: FunctionComponent = ({ route, navigation }) => {
 
   useEffect(() => {
     navigation.setOptions({ title: item?.name ?? 'Détails' })
-  }, [item])
+  }, [item, navigation])
 
   return (
     <BasicContainer isLoading={loading} loadingText={'Chargement des détails ...'}>
@@ -24,10 +24,10 @@ export const RestaurantDetails: FunctionComponent = ({ route, navigation }) => {
           onLoadEnd={() => { setLoading(false) }}
         />
       </View>
-      {/* Handling HTML descriptions */}
       <Text />
       <View style={styles.description}>
         <Text style={styles.title}>Informations :</Text>
+        {/* Handling HTML descriptions */}
         <HTML source={{ html: item?.shortDescription }} />
       </View>
     </BasicContainer>

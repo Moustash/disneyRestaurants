@@ -53,6 +53,20 @@ const styles = StyleSheet.create({
     borderWidth: 5,
     borderColor: Colors.background,
   },
+  errorContainer: {
+    justifyContent: 'center',
+    padding: 20,
+    fontSize: 18,
+    fontStyle: 'italic',
+    backgroundColor: Colors.ghostWhite,
+    borderRadius: 20,
+    marginHorizontal: 20,
+    marginVertical: 20,
+  },
+  errorText: {
+    marginBottom: 20,
+    textAlign: 'center',
+  },
 })
 
 export default styles
