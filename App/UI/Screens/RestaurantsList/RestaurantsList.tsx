@@ -83,10 +83,11 @@ export const RestaurantList: FunctionComponent = () => {
           hitSlop={{ top: 20, bottom: 10, right: 20, left: 20 }}
         />
         <FlatList
+          contentContainerStyle={{ paddingBottom: 100 }}
           style={styles.listContainer}
-          windowSize={50}
+          windowSize={150}
           scrollEventThrottle={2}
-          maxToRenderPerBatch={50}
+          maxToRenderPerBatch={150}
           onEndReachedThreshold={0.5}
           data={filteredRestaurants}
           keyExtractor={item => item.id}
@@ -102,8 +103,6 @@ export const RestaurantList: FunctionComponent = () => {
               />
             )
           }}
-          updateCellsBatchingPeriod={100}
-          bounces={false}
           removeClippedSubviews
           disableVirtualization
           keyboardShouldPersistTaps={'always'}
