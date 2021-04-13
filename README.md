@@ -1,6 +1,6 @@
 # Disney Restaurant App
 
-This application en `react-native`has for simple purpose to extract information about Disneyland Paris's restaurants from Disney's official API.
+This `react-native` application has for simple purpose to extract information about Disneyland Paris's restaurants from Disney's official API.
 
 ## Getting started
 
